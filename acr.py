@@ -3,20 +3,20 @@ from msilib.schema import Class
 from typing_extensions import Self
 from azure.containerregistry import ContainerRegistryClient
 from azure.cli.core import get_default_cli
+from az.cli import az
 
-class Create_ACR(acr_url, acr_region, replication, sku, admin):
+class Create_ACR:
+        acr_url = input("tst")
+        replication = bool
+        replication_region = repl_region
+        sku = ("")
+        admin = bool
+        acr_region = input('')
         # Create Registry
-    def create_acr(acr_url, region, replication, sku, admin):
-        
-        self.acr_url = input("tst")
-        self.acr_region = ('')
-        self.replication = bool
-        self.eplication_region = repl_region
-        self.sku = ("")
-        self.admin = bool
-        if exit_code == 0:
-            print ("ACR created")
-        else: 
-            print(logs)
-
-createAcr = create_acr('maynard1', 'centralus', False, 'Standard', True)
+                
+        def create_acr(acr_url, acr_region, replication_region, sku, admin): 
+                     
+            if exit_code == 0:  
+                print ("ACR created")
+            else: 
+                print(logs)
