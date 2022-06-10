@@ -9,14 +9,14 @@ import auth
 class Create_ACR:
         credential = DefaultAzureCredential()
         # Create Registry
-        def create_acr(acr_url, acr_region, replication, replication_region, sku, admin):
+        def create_acr(auth.subscription, acr_url, acr_region, replication, replication_region, sku, admin):
             acr_url = input("tst")
             replication = input(bool)
             replication_region = input(repl_region)
             sku = input("")
             admin = input(bool)
             acr_region = input('')
-            args=[acr_url, replication, replication_region, sku, admin, acr_region]
+            args=[auth.subcription, acr_url, replication, replication_region, sku, admin, acr_region]
             cli = get_default_cli()
             if cli.invoke(args):
                 return cli.result.result
