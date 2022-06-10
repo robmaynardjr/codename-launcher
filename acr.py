@@ -4,9 +4,10 @@ from typing_extensions import Self
 from azure.containerregistry import ContainerRegistryClient
 from azure.cli.core import get_default_cli
 from az.cli import az
+import auth
 
 class Create_ACR:
-        
+        credential = DefaultAzureCredential()
         # Create Registry
         def create_acr(acr_url, acr_region, replication, replication_region, sku, admin):
             acr_url = input("tst")
