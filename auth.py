@@ -5,8 +5,7 @@ credential = DefaultAzureCredential()
 
 client = ResourceManagementClient(
     credential=credential,
-    subscription_id=input("YOUR_SUBSCRIPTION_ID"
-)
+    subscription_id=input("subscription")
 
 for resource_group in client.resource_groups.list():
     print(f"Resource group: {resource_group.name}")
